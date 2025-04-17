@@ -1,0 +1,65 @@
+name: "Performance Issue"
+description: "Report performance-related issues, such as slowdowns or bottlenecks."
+labels: ["performance", "high priority", "bug"]
+
+assignees: []
+
+body:
+  - type: "markdown"
+    attributes:
+      value: |
+        **Thank you for reporting a performance issue! Please fill out the following details to help us assess and resolve the problem effectively.**
+
+  - type: "input"
+    attributes:
+      label: "What is the performance issue?"
+      description: "Describe the performance issue you are experiencing, such as slowness, high memory usage, or slow response times."
+      placeholder: "e.g., The application takes over 10 seconds to load the dashboard page."
+
+  - type: "input"
+    attributes:
+      label: "How severe is the performance issue?"
+      description: "Please rate the severity of the issue. Is it blocking your work or causing a major issue?"
+      placeholder: "e.g., It significantly affects my ability to use the application effectively."
+
+  - type: "input"
+    attributes:
+      label: "Steps to reproduce the issue"
+      description: "Provide clear steps to reproduce the performance issue. If possible, include the code or setup required to reproduce it."
+      placeholder: "e.g., 1. Open the dashboard page  2. Wait for the page to load."
+
+  - type: "input"
+    attributes:
+      label: "What is the expected performance?"
+      description: "What is the expected behavior or performance? This will help us understand how the system should behave under normal conditions."
+      placeholder: "e.g., The dashboard should load within 2 seconds."
+
+  - type: "input"
+    attributes:
+      label: "Environment details"
+      description: "Provide details about your environment such as operating system, hardware, software version, and any relevant configurations."
+      placeholder: "e.g., Windows 10, 8GB RAM, Node.js v14.15.0"
+
+  - type: "input"
+    attributes:
+      label: "What steps have you taken to diagnose the issue?"
+      description: "Describe any steps you’ve taken to troubleshoot the performance problem (e.g., profiling, checking logs, etc.)."
+      placeholder: "e.g., I ran a memory profiler and noticed that memory usage spikes when loading the dashboard."
+
+  - type: "input"
+    attributes:
+      label: "Have you noticed any related issues or patterns?"
+      description: "Describe any patterns or related issues you have observed, such as certain actions triggering the performance degradation."
+      placeholder: "e.g., The issue seems to occur only when the dataset is larger than 1000 rows."
+
+  - type: "input"
+    attributes:
+      label: "Performance benchmarks (if available)"
+      description: "If you have any performance benchmarks (e.g., response times, memory usage) before and after the issue occurs, please provide them here."
+      placeholder: "e.g., Before the issue: 1 second to load; After the issue: 10 seconds to load."
+
+  - type: "input"
+    attributes:
+      label: "Any other context"
+      description: "Please provide any other relevant information or context that may help us identify and resolve the issue."
+      placeholder: "e.g., This issue occurs only after a recent update to the software."

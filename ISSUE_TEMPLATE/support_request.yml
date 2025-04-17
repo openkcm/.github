@@ -1,0 +1,53 @@
+name: "Support Request"
+description: "Request support or assistance with setup, deployment, or usage"
+labels: ["support", "help wanted"]
+
+assignees: []
+
+body:
+  - type: "markdown"
+    attributes:
+      value: |
+        **Thank you for reaching out for support! Please fill out the following details to help us assist you more effectively.**
+
+  - type: "input"
+    attributes:
+      label: "What issue are you experiencing?"
+      description: "Please describe the problem you are facing clearly and in detail."
+      placeholder: "e.g., I am unable to run the project after following the setup instructions."
+
+  - type: "input"
+    attributes:
+      label: "What environment are you working in?"
+      description: "Please provide your environment details such as OS, version, software dependencies, etc."
+      placeholder: "e.g., Ubuntu 20.04, Node.js v14.x, NPM v6.14"
+
+  - type: "input"
+    attributes:
+      label: "What steps did you take to try to resolve the issue?"
+      description: "Describe any steps you’ve taken to troubleshoot or resolve the issue yourself."
+      placeholder: "e.g., I’ve checked the README, reinstalled dependencies, and cleared the cache."
+
+  - type: "input"
+    attributes:
+      label: "Error messages or logs"
+      description: "Please provide any relevant error messages or logs that may help diagnose the issue."
+      placeholder: "e.g., 'Error: Cannot find module 'xyz', line 42'. Include as much detail as possible."
+
+  - type: "input"
+    attributes:
+      label: "What version of the project are you using?"
+      description: "Please specify the version of the project you are trying to use."
+      placeholder: "e.g., v1.2.0, master branch, etc."
+
+  - type: "input"
+    attributes:
+      label: "Additional context"
+      description: "Please provide any additional context or information that might help us understand the issue better."
+      placeholder: "e.g., The issue started after I updated to the latest version of Node.js."
+
+  - type: "input"
+    attributes:
+      label: "Would you like to contribute a fix?"
+      description: "Let us know if you’d be interested in submitting a fix once the issue is resolved."
+      placeholder: "e.g., Yes, I'd be happy to help fix this issue once I understand the root cause."

@@ -1,0 +1,141 @@
+# GitHub Issue Template Configuration
+# This configuration file helps to organize and manage all issue templates, ensuring clarity and consistency across the project.
+
+name: "GitHub Issue and PR Templates"
+description: "Configuration for the issue and PR templates used by the community. This file manages all templates for reporting bugs, requesting features, discussing ideas, and managing tasks."
+
+# Set the path for the issue templates
+path: .github/ISSUE_TEMPLATE
+
+# Issue Template Configuration
+issues:
+  # Bug Report Template
+  - name: "Bug Report"
+    template: "bug_report.yml"
+    description: "Use this template to report a bug or unexpected behavior in the project."
+    labels: ["bug", "high priority"]
+    assignees: []
+    # Optionally, you can set a default assignee or reviewers here
+    reviewers: []
+
+  # Feature Request Template
+  - name: "Feature Request"
+    template: "feature_request.yml"
+    description: "Submit a request for a new feature or enhancement to improve the project."
+    labels: ["enhancement", "feature request"]
+    assignees: []
+    reviewers: []
+
+  # Documentation Issue Template
+  - name: "Documentation Issue"
+    template: "docs_issue.yml"
+    description: "Report an issue or suggest changes to the documentation, such as inaccuracies, missing details, or outdated information."
+    labels: ["documentation", "help wanted"]
+    assignees: []
+    reviewers: []
+
+  # Question / Help Request Template
+  - name: "Question / Help Request"
+    template: "question.yml"
+    description: "Use this template to ask a question or request help regarding the project."
+    labels: ["question", "help"]
+    assignees: []
+    reviewers: []
+
+  # Support Request Template
+  - name: "Support Request"
+    template: "support_request.yml"
+    description: "Report a problem or ask for help on how to use the project, its features, or functionality."
+    labels: ["support", "help"]
+    assignees: []
+    reviewers: []
+
+  # Security Issue Template
+  - name: "Security Issue"
+    template: "security_issue.yml"
+    description: "Report a security vulnerability or issue within the project."
+    labels: ["security", "critical"]
+    assignees: []
+    reviewers: []
+
+  # Performance Issue Template
+  - name: "Performance Issue"
+    template: "performance_issue.yml"
+    description: "Report an issue related to the performance, speed, or memory usage of the project."
+    labels: ["performance", "high priority"]
+    assignees: []
+    reviewers: []
+
+  # Community Discussion Template
+  - name: "Community Discussion"
+    template: "community_discussion.yml"
+    description: "Initiate a discussion about the project, a feature, or any community-related topic."
+    labels: ["discussion", "community", "idea"]
+    assignees: []
+    reviewers: []
+
+  # Task / To-Do Template
+  - name: "Task to Do"
+    template: "task_to_do.yml"
+    description: "Create a task that needs to be done, such as a bug fix, feature, or other actionable item."
+    labels: ["task", "to-do", "enhancement"]
+    assignees: []
+    reviewers: []
+
+# Pull Request Template Configuration
+pull_request:
+  # Pull Request Template
+  - name: "Pull Request"
+    template: "pr_template.yml"
+    description: "Submit a pull request with your changes, enhancements, or fixes."
+    labels: ["pull request", "enhancement", "contribution"]
+    assignees: []
+    reviewers: []
+
+# Optional: Add default labels for issue categorization
+labels:
+  - "bug"
+  - "enhancement"
+  - "feature request"
+  - "documentation"
+  - "question"
+  - "help"
+  - "security"
+  - "performance"
+  - "critical"
+  - "task"
+  - "to-do"
+  - "pull request"
+  - "discussion"
+  - "community"
+  - "high priority"
+  - "help wanted"
+  - "idea"
+  - "good first issue"
+
+# Optional: Add a default template that will show up when creating new issues
+defaults:
+  # Set the Bug Report Template as the default template for new issues
+  - name: "Bug Report"
+    description: "Automatically suggests this template when creating new issues."
+    default: true
+
+# Optional: Provide guidelines for contributors when submitting issues or PRs
+contributor_guidelines:
+  - "Please make sure you are using the appropriate template for your issue or PR."
+  - "Ensure you provide all relevant details such as steps to reproduce (for bugs) or use cases (for features)."
+  - "Use clear and concise descriptions to help maintainers and other contributors understand the issue or request."
+  - "Provide any additional context such as logs, screenshots, or environment details to assist with troubleshooting."
+  - "Respect other community members and engage in constructive and respectful discussions."
+  - "Check if the issue or feature request already exists before submitting."
+
+# Optional: Add a note about labels and their usage
+label_guidelines:
+  - "Labels help categorize issues and PRs. Make sure to use the correct label based on the type of issue or request."
+  - "Use 'bug' for reported bugs and issues related to broken functionality."
+  - "Use 'enhancement' for feature requests or improvements to existing functionality."
+  - "Use 'documentation' for issues or suggestions related to documentation."
+  - "Use 'security' for any reported security issues or vulnerabilities."
+  - "Use 'performance' for issues related to the performance, speed, or memory usage of the project."
+  - "Use 'task' for smaller tasks or to-do items related to the project."
+  - "Use 'discussion' for ongoing community or feature discussions."

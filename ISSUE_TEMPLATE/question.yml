@@ -1,0 +1,41 @@
+name: "Question"
+description: "Ask a question or request help about the project"
+labels: ["question", "help wanted"]
+
+assignees: []
+
+body:
+  - type: "markdown"
+    attributes:
+      value: |
+        **Thank you for your question! Please fill out the following details to help us assist you better.**
+
+  - type: "input"
+    attributes:
+      label: "What is your question?"
+      description: "Please provide a clear and concise description of your question."
+      placeholder: "e.g., How do I set up the project for local development?"
+
+  - type: "input"
+    attributes:
+      label: "What have you tried so far?"
+      description: "Please describe what you’ve tried to resolve the issue or answer the question yourself."
+      placeholder: "e.g., I’ve followed the README but am still encountering an error."
+
+  - type: "input"
+    attributes:
+      label: "Where did you encounter this issue?"
+      description: "Specify where you encountered the problem (e.g., setup guide, documentation, etc.)."
+      placeholder: "e.g., In the installation section of the README"
+
+  - type: "input"
+    attributes:
+      label: "Additional context"
+      description: "Please provide any additional context, including relevant screenshots, code snippets, or error messages."
+      placeholder: "e.g., Here's the error message I get when running the setup script."
+
+  - type: "input"
+    attributes:
+      label: "Would you like to contribute a fix?"
+      description: "Let us know if you’d be interested in contributing a fix or improvement after getting the answer."
+      placeholder: "e.g., Yes, I’d be happy to submit a PR once I understand the problem."

@@ -1,0 +1,41 @@
+name: "Feature Request"
+description: "Suggest an idea for a new feature or enhancement"
+labels: ["enhancement", "feature request"]
+
+assignees: []
+
+body:
+  - type: "markdown"
+    attributes:
+      value: |
+        **Thank you for suggesting a feature! Please fill out the following details to help us understand your request better.**
+
+  - type: "input"
+    attributes:
+      label: "What is the problem you're trying to solve?"
+      description: "Please describe the problem or the gap in functionality you're experiencing."
+      placeholder: "e.g., It's difficult to keep track of the current user session."
+
+  - type: "input"
+    attributes:
+      label: "Describe the solution you'd like"
+      description: "Please describe the feature or enhancement you are requesting."
+      placeholder: "e.g., A session timeout feature that logs users out after 30 minutes of inactivity."
+
+  - type: "input"
+    attributes:
+      label: "Why is this feature important to you?"
+      description: "Explain why this feature is needed and how it will improve the project."
+      placeholder: "e.g., It will improve security and enhance user experience."
+
+  - type: "input"
+    attributes:
+      label: "Are there any alternatives or workarounds?"
+      description: "If applicable, describe any alternatives or temporary solutions you're currently using."
+      placeholder: "e.g., I manually log out every time, but it's cumbersome."
+
+  - type: "input"
+    attributes:
+      label: "Additional context"
+      description: "Add any other context or screenshots that may help us understand the request."
+      placeholder: "e.g., It would be great if this feature was configurable in the app settings."

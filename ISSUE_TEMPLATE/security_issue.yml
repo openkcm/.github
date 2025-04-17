@@ -1,0 +1,64 @@
+name: "Security Issue"
+description: "Report a security vulnerability or sensitive issue with the project"
+labels: ["security", "vulnerability", "high priority"]
+
+assignees: []
+
+body:
+  - type: "markdown"
+    attributes:
+      value: |
+        **Thank you for responsibly reporting a security issue. Please provide the following details to help us assess the issue.**
+
+  - type: "input"
+    attributes:
+      label: "Summary of the vulnerability"
+      description: "Provide a brief summary of the security vulnerability or issue."
+      placeholder: "e.g., A remote code execution vulnerability in the authentication module."
+
+  - type: "input"
+    attributes:
+      label: "Steps to reproduce"
+      description: "Provide clear steps to reproduce the vulnerability or issue. Please be specific and concise."
+      placeholder: "e.g., 1. Clone the repository.  2. Run the login script.  3. Trigger the vulnerability."
+
+  - type: "input"
+    attributes:
+      label: "Impact of the vulnerability"
+      description: "Explain the severity and impact of the issue. For example, what systems or data are affected, and what potential damage could be done."
+      placeholder: "e.g., This vulnerability allows attackers to execute arbitrary code on the server, potentially compromising all data."
+
+  - type: "input"
+    attributes:
+      label: "Affected version(s)"
+      description: "Specify the version(s) of the project that are affected by this vulnerability. If the issue applies to a specific branch, please mention that as well."
+      placeholder: "e.g., v2.0.1, master branch"
+
+  - type: "input"
+    attributes:
+      label: "Environment details"
+      description: "Describe the environment in which the vulnerability was discovered, such as operating system, dependencies, or server configuration."
+      placeholder: "e.g., Ubuntu 20.04, Node.js v14.15.1"
+
+  - type: "input"
+    attributes:
+      label: "Mitigation or suggested fix"
+      description: "If you have any recommendations or suggested fixes, please provide them here."
+      placeholder: "e.g., Patch the authentication module to sanitize input properly."
+
+  - type: "input"
+    attributes:
+      label: "Have you already taken steps to mitigate this vulnerability?"
+      description: "If you've already implemented any mitigation measures or fixes, please describe them here."
+      placeholder: "e.g., Disabled the vulnerable endpoint until a fix is released."
+
+  - type: "input"
+    attributes:
+      label: "Additional context"
+      description: "Please provide any other relevant context or information that may help with resolving the security issue. If you have a proof-of-concept (PoC) or a detailed report, consider providing it privately."
+      placeholder: "e.g., Attached a PoC video showing the vulnerability in action."
+
+  - type: "markdown"
+    attributes:
+      value: |
+        **Important:** This is a security issue, so please do not share any sensitive details publicly. We will handle it privately and work on a fix as soon as possible.

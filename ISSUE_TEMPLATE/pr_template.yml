@@ -1,0 +1,53 @@
+name: "Pull Request"
+description: "Create a pull request to submit changes or improvements to the project"
+labels: ["pull request", "enhancement", "documentation", "bug fix"]
+
+assignees: []
+
+body:
+  - type: "markdown"
+    attributes:
+      value: |
+        **Thank you for submitting a pull request! Please fill out the following details to help us review your changes.**
+
+  - type: "input"
+    attributes:
+      label: "Related issue(s)"
+      description: "If this PR addresses any issues, please link to them by specifying the issue number(s). For example, 'Fixes #123'."
+      placeholder: "e.g., Fixes #456"
+
+  - type: "input"
+    attributes:
+      label: "What does this PR do?"
+      description: "Provide a brief description of the changes made in this pull request."
+      placeholder: "e.g., Fixes a bug in the login form validation."
+
+  - type: "input"
+    attributes:
+      label: "What problem does this PR solve?"
+      description: "Explain the problem that this PR solves or the feature it implements."
+      placeholder: "e.g., Previously, the form validation failed when submitting with empty fields."
+
+  - type: "input"
+    attributes:
+      label: "How has this been tested?"
+      description: "Describe the testing you have performed to ensure the changes work as expected."
+      placeholder: "e.g., I ran the unit tests, and all tests passed. I also manually tested the form validation."
+
+  - type: "input"
+    attributes:
+      label: "Checklist"
+      description: "Please check off the following tasks to ensure the PR is ready for review."
+      placeholder: "e.g., [ ] Code follows the project's style guide."
+      options:
+        - label: "Code follows the project's style guide."
+        - label: "I have added necessary tests."
+        - label: "I have updated the documentation if required."
+        - label: "The code is well-commented."
+        - label: "I have tested the changes locally."
+
+  - type: "input"
+    attributes:
+      label: "Any other information?"
+      description: "Provide any additional context or relevant information that the reviewer should know."
+      placeholder: "e.g., This change requires a migration of the database schema."

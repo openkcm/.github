@@ -1,0 +1,59 @@
+name: "Task to Do"
+description: "Create a task that needs to be completed, such as a small bug fix, feature request, or other actionable item."
+labels: ["task", "to-do", "enhancement", "bug fix"]
+
+assignees: []
+
+body:
+  - type: "markdown"
+    attributes:
+      value: |
+        **Thank you for adding a task to the project! Please fill out the following details to ensure the task is clearly defined and actionable.**
+
+  - type: "input"
+    attributes:
+      label: "What is the task?"
+      description: "Provide a clear and concise description of the task that needs to be completed."
+      placeholder: "e.g., Implement a dark mode toggle feature for the app."
+
+  - type: "input"
+    attributes:
+      label: "What is the priority of this task?"
+      description: "Specify the priority level of this task (e.g., high, medium, low)."
+      placeholder: "e.g., High priority"
+
+  - type: "input"
+    attributes:
+      label: "What is the expected outcome of this task?"
+      description: "Explain what the expected result or output will be once the task is completed."
+      placeholder: "e.g., A toggle button in the settings menu to switch between light and dark modes."
+
+  - type: "input"
+    attributes:
+      label: "What steps are needed to complete this task?"
+      description: "Provide the steps or action items required to complete this task. Be as detailed as needed."
+      placeholder: "e.g., 1. Create a dark mode CSS theme.  2. Add a toggle button in settings.  3. Implement local storage to persist user preferences."
+
+  - type: "input"
+    attributes:
+      label: "Estimated time to complete"
+      description: "Provide an estimated time for completing the task, if known."
+      placeholder: "e.g., 3 hours"
+
+  - type: "input"
+    attributes:
+      label: "Dependencies (if any)"
+      description: "Are there any dependencies that need to be addressed before starting this task?"
+      placeholder: "e.g., This task depends on Issue #123 being resolved first."
+
+  - type: "input"
+    attributes:
+      label: "Who can help with this task?"
+      description: "Is there anyone who can assist with this task or any team members who are particularly suited to completing it?"
+      placeholder: "e.g., @developer1 and @designer2 could help with implementing the UI for the toggle button."
+
+  - type: "input"
+    attributes:
+      label: "Any other relevant context?"
+      description: "Provide any additional context or information that may help in completing the task."
+      placeholder: "e.g., The dark mode theme should match the existing app color scheme."

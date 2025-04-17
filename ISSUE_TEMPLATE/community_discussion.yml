@@ -1,0 +1,52 @@
+name: "Community Discussion"
+description: "Initiate a discussion or ask a question about the project. Engage with the community."
+labels: ["discussion", "community", "question"]
+
+assignees: []
+
+body:
+  - type: "markdown"
+    attributes:
+      value: |
+        **Thank you for starting a community discussion! Please fill out the following details to help us have a productive conversation.**
+
+  - type: "input"
+    attributes:
+      label: "What is the topic of discussion?"
+      description: "Provide a clear and concise description of the topic or idea you would like to discuss with the community."
+      placeholder: "e.g., Proposal for a new feature: Dark Mode."
+
+  - type: "input"
+    attributes:
+      label: "What is your motivation for this discussion?"
+      description: "Explain why you believe this topic is important or what inspired you to start the discussion."
+      placeholder: "e.g., I believe adding dark mode will improve the user experience, especially in low-light environments."
+
+  - type: "input"
+    attributes:
+      label: "What are your thoughts, ideas, or suggestions?"
+      description: "Share any ideas, thoughts, or suggestions you have regarding this topic."
+      placeholder: "e.g., I suggest using CSS variables to implement dark mode, which will allow users to toggle between light and dark themes."
+
+  - type: "input"
+    attributes:
+      label: "What potential impact will this have?"
+      description: "Explain the potential positive or negative impact this change or discussion might have on the project."
+      placeholder: "e.g., This will enhance accessibility and user experience, but may require significant updates to the UI."
+
+  - type: "input"
+    attributes:
+      label: "How can the community contribute?"
+      description: "If relevant, explain how others can contribute to the discussion or provide feedback."
+      placeholder: "e.g., Please provide any thoughts on design implementation, or if there are any better approaches."
+
+  - type: "input"
+    attributes:
+      label: "Additional context"
+      description: "Provide any additional context, links to related discussions, or references that might help with the conversation."
+      placeholder: "e.g., I found a similar discussion in Issue #123 that may be useful to reference."
+
+  - type: "markdown"
+    attributes:
+      value: |
+        **Note:** Please be respectful and constructive in your comments. We encourage diverse perspectives and aim to foster a collaborative community.

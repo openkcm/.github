@@ -1,0 +1,53 @@
+name: "Documentation Issue"
+description: "Report an issue with the project's documentation"
+labels: ["docs", "help wanted", "documentation"]
+
+assignees: []
+
+body:
+  - type: "markdown"
+    attributes:
+      value: |
+        **Thank you for reporting a documentation issue! Please fill out the following details to help us address the problem.**
+
+  - type: "input"
+    attributes:
+      label: "What section of the documentation is the issue related to?"
+      description: "Please specify which part of the documentation you're referring to."
+      placeholder: "e.g., README, Setup Instructions, API Docs"
+
+  - type: "input"
+    attributes:
+      label: "What is the problem with this documentation?"
+      description: "Provide a clear description of the issue (e.g., missing information, outdated content, unclear instructions)."
+      placeholder: "e.g., The setup instructions are outdated and no longer work."
+
+  - type: "input"
+    attributes:
+      label: "Suggested improvements or fixes"
+      description: "If you have a suggestion on how to improve or fix the documentation, please provide it here."
+      placeholder: "e.g., Update the setup instructions to include the latest version of Node.js."
+
+  - type: "input"
+    attributes:
+      label: "Steps to reproduce (if applicable)"
+      description: "If the issue involves steps that lead to a problem, please outline the steps."
+      placeholder: "e.g., 1. Follow the current instructions  2. Encounter an error during installation"
+
+  - type: "input"
+    attributes:
+      label: "Where did you encounter this issue?"
+      description: "Please mention where you found this issue (e.g., specific page, tutorial, section of the README)."
+      placeholder: "e.g., On the 'Installation' section of the README file."
+
+  - type: "input"
+    attributes:
+      label: "Would you like to submit a pull request with the fix?"
+      description: "Let us know if you'd be interested in submitting a pull request to fix this documentation issue."
+      placeholder: "e.g., Yes, I can submit a PR for this fix."
+
+  - type: "input"
+    attributes:
+      label: "Additional context"
+      description: "Please provide any additional context or screenshots that can help clarify the issue."
+      placeholder: "e.g., Screenshots of the broken links or error messages."
