@@ -13,7 +13,7 @@
 
 👋 Welcome to the official OpenKCM. We are part of ApeiroRA which is an Important Project of Common European Interest.
 
-### 🌐 ApeiroRA?
+## 🌐 ApeiroRA?
 
 ApeiroRA is a reference blueprint for an open, flexible, secure, and compliant next-generation cloud-edge continuum and therefore a key contribution to IPCEI-CIS. At a high level, the projects of ApeiroRA allow users to provider-agnostically fetch, request and consume services, and for service providers to describe, offer and provision their services.
 
