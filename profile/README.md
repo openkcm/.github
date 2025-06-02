@@ -15,7 +15,6 @@
 
 ### 🌐 ApeiroRA?
 
----
 ApeiroRA is a reference blueprint for an open, flexible, secure, and compliant next-generation cloud-edge continuum and therefore a key contribution to IPCEI-CIS. At a high level, the projects of ApeiroRA allow users to provider-agnostically fetch, request and consume services, and for service providers to describe, offer and provision their services.
 
 By being open source, ApeiroRA provides a cross-border spillover effect, solidifying the foundation and future of the project.
@@ -24,10 +23,8 @@ Learn more about ApeiroRA by checking out the official website at https://apeiro
 
 ## 👥 Get Involved
 
----
 We welcome contributions of all kinds, from code to documentation, testing, and design. If you're interested in getting involved, check out our open issues.
 
 ## 🌈 Code of Conduct
 
----
 To facilitate a nice environment for all, check out [our Code of Conduct](https://github.com/openkcm/.github/blob/main/CODE_OF_CONDUCT.md).
