@@ -24,8 +24,22 @@ Learn more about ApeiroRA by checking out the official website at https://apeiro
 ## 👥 Get Involved
 
 We welcome contributions of all kinds, from code to documentation, testing, and design. If you're interested in getting involved, check out our open issues.
-You can have look at our current road map to have a better overview of our planned features: Road Map [https://github.com/openkcm/documentation/issues/2]
+You can have look at our current road map to have a better overview of our planned features: [Road Map](https://github.com/openkcm/.github/blob/main/ROADMAP.md)
 
 ## 🌈 Code of Conduct
 
 To facilitate a nice environment for all, check out [our Code of Conduct](https://github.com/openkcm/.github/blob/main/CODE_OF_CONDUCT.md).
+
+## 👩‍💻 Useful Resources
+
+- [Documentation](https://github.com/openkcm/documentation) - Architecture Decision Records (ADRs), use cases, and developer guides.
+
+### Current Use Cases
+
+OpenKCM provides cryptographic key management capabilities for cloud-native environments. Our current focus areas include:
+
+- **L1 Key Operations** - Customer Master Key (CMK) operations including key creation, rotation, and lifecycle management via OpenBao Transit Keys
+- **Crypto Layer (Krypton)** - Internal Versioned Key (IVK) management with algorithm-agnostic encryption and automatic key rotation
+- **Tenant & System Management** - Multi-tenant isolation with secure identity propagation
+- **Plugin Architecture** - Extensible keystore and identity management plugins for various backend integrations (AWS KMS, GCP KMS, Azure Key Vault, HSM/PKCS#11)
+- **Platform Mesh Integration** - Seamless integration with the Apeiro Platform Mesh for multi-tenant key management
