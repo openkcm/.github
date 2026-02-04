@@ -24,6 +24,7 @@ Learn more about ApeiroRA by checking out the official website at https://apeiro
 ## 👥 Get Involved
 
 We welcome contributions of all kinds, from code to documentation, testing, and design. If you're interested in getting involved, check out our open issues.
+You can have look at our current road map to have a better overview of our planned features: Road Map[https://github.com/openkcm/documentation/issues/2]
 
 ## 🌈 Code of Conduct
 
