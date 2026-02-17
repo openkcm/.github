@@ -30,7 +30,10 @@ You can have look at our current road map to have a better overview of our plann
 
 To facilitate a nice environment for all, check out [our Code of Conduct](https://github.com/openkcm/.github/blob/main/CODE_OF_CONDUCT.md).
 
-## 👩‍💻 Useful Resources
+
+## 👩‍💻 How to Start
+
+You can try out OpenKCM by following our documentation and exploring the CMK Layer directly. We are actively adding new developments to our solution. Check out the documentation for setup instructions and links to what we offer.
 
 - [Documentation](https://github.com/openkcm/documentation) - Architecture Decision Records (ADRs), use cases, and developer guides.
 
