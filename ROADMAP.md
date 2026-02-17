@@ -12,48 +12,36 @@ This document provides an overview of all tracked issues across OpenKCM reposito
 2026
 │
 ├─ Q1 (Jan-Mar) ──── INVESTIGATION & DESIGN
-│   ├── Low-Level Design (LLD) for Krypton
-│   ├── KMIP Protocol POC
-│   └── Architecture decisions finalized
+│   ├── Low-Level Design (LLD) for Krypton ([EPIC #1](https://github.com/openkcm/openkcm-controller/issues/1))
+│   ├── KMIP Protocol POC ([EPIC #1](https://github.com/openkcm/openkcm-controller/issues/1))
+│   └── Architecture decisions finalized ([EPIC #1](https://github.com/openkcm/openkcm-controller/issues/1))
 │
 ├─ Q2 (Apr-Jun) ──── KRYPTON CORE DEVELOPMENT
-│   ├── **Krypton Integration in Showroom**
-│   └── **CMK Core Deployment in Showroom**
-│   ├── KMIP Server implementation
-│   ├── KeyChain & Key lifecycle (L2-L4)
-│   ├── Static MasterKey provider
-│   ├── CLI tool (krypton command)
-│   └── Platform Mesh deployment (Showroom demo)
+│   ├── KMIP Server implementation ([EPIC #61](https://github.com/openkcm/crypto/issues/61))
+│   ├── KeyChain & Key lifecycle (L2-L4) ([EPIC #60](https://github.com/openkcm/crypto/issues/60))
+│   ├── Static MasterKey provider ([EPIC #61](https://github.com/openkcm/crypto/issues/61))
+│   ├── CLI tool (krypton command) ([EPIC #61](https://github.com/openkcm/crypto/issues/61))
+│   └── Krypton Integration in Showroom ([EPIC #61](https://github.com/openkcm/crypto/issues/61))
+│
+├─ Q2 (Apr-Jun) ──── CMK INTEGRATION IN PLATFORM MESH
+│   ├── Tenant management ([EPIC #4](https://github.com/openkcm/cmk-ui/issues/4))
+│   └── CMK Core Deployment in Showroom ([EPIC #38](https://github.com/openkcm/cmk/issues/38))
 │
 ├─ Q3 (Jul-Sep) ──── 🎯 CRYPTO LAYER MVP (End of Summer)
 │
-├─ Q4 (Oct-Dec) ──── CMK INTEGRATION & HARDENING
-│   ├── L1 (CMK) ↔ L2-L4 (Krypton) integration
-│   ├── Seal/Auto-Unseal implementation
-│   ├── Keystore plugin (OpenBao)
-│   └── HA & disaster recovery
-│   ├── MongoDB KMIP integration validated
-│   ├── Multi-tenant key isolation
-│   ├── mTLS authentication
-│   ├── In-memory + persistent storage
-│   └── Production-ready Showroom deployment
+├─ Q3 (Jul-Sep) ──── CMK DEVELOPMENTS
+│   ├── Keystore plugin (OpenBao) ([EPIC #79](https://github.com/openkcm/keystore-plugins/issues/79))
+│   └── CMK UI adoption ([EPIC #2](https://github.com/openkcm/cmk-ui/issues/2))
 │
-└─ Q4 (Oct-Dec) ──── CMK INTEGRATION & HARDENING
-    ├── L1 (CMK) ↔ L2-L4 (Krypton) integration
-    ├── Seal/Auto-Unseal implementation
-    ├── Keystore plugins (OpenBao, AWS, Azure, GCP)
-    └── HA & disaster recovery
-```
-
-### Key Milestones
-
-| Milestone | Target Date | Description |
-|-----------|-------------|-------------|
-| 🚀 **Showroom Demo** | Jun 2026 | Krypton running on Platform Mesh with MongoDB |
-| 🟦 **CMK & Krypton Integration** | Jun 2026 | CMK and Krypton both deployed and integrated in Showroom (internal keystore only) |
-| 🔗 **Full Chain (L1-L4)** | Nov 2026 | CMK + Krypton integrated end-to-end |
-| 🧩 **Keystore Plugin** | Q4 2026+ | OpenBao plugin support for external keystore |
-
+├─ Q4 (Oct-Dec) ──── CMK INTEGRATION & HARDENING
+│   ├── L1 (CMK) ↔ L2-L4 (Krypton) integration ([EPIC #38](https://github.com/openkcm/cmk/issues/38))
+│   ├── Seal/Auto-Unseal implementation ([EPIC #61](https://github.com/openkcm/crypto/issues/61))
+│   ├── HA & disaster recovery ([EPIC #61](https://github.com/openkcm/crypto/issues/61))
+│   ├── MongoDB KMIP integration validated ([EPIC #61](https://github.com/openkcm/crypto/issues/61))
+│   ├── Multi-tenant key isolation ([EPIC #60](https://github.com/openkcm/crypto/issues/60))
+│   ├── mTLS authentication ([EPIC #61](https://github.com/openkcm/crypto/issues/61))
+│   ├── In-memory + persistent storage ([EPIC #61](https://github.com/openkcm/crypto/issues/61))
+│   └── Production-ready Showroom deployment ([EPIC #38](https://github.com/openkcm/cmk/issues/38))
 | Milestone | Target Date | Description |
 |-----------|-------------|-------------|
 | 🔬 **LLD Complete** | Mar 2026 | Low-Level Design finalized, interfaces defined |
