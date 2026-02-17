@@ -17,6 +17,8 @@ This document provides an overview of all tracked issues across OpenKCM reposito
 │   └── Architecture decisions finalized
 │
 ├─ Q2 (Apr-Jun) ──── KRYPTON CORE DEVELOPMENT
+│   ├── **Krypton Integration in Showroom**
+│   └── **CMK Core Deployment in Showroom**
 │   ├── KMIP Server implementation
 │   ├── KeyChain & Key lifecycle (L2-L4)
 │   ├── Static MasterKey provider
@@ -24,6 +26,12 @@ This document provides an overview of all tracked issues across OpenKCM reposito
 │   └── Platform Mesh deployment (Showroom demo)
 │
 ├─ Q3 (Jul-Sep) ──── 🎯 CRYPTO LAYER MVP (End of Summer)
+│
+├─ Q4 (Oct-Dec) ──── CMK INTEGRATION & HARDENING
+│   ├── L1 (CMK) ↔ L2-L4 (Krypton) integration
+│   ├── Seal/Auto-Unseal implementation
+│   ├── Keystore plugin (OpenBao)
+│   └── HA & disaster recovery
 │   ├── MongoDB KMIP integration validated
 │   ├── Multi-tenant key isolation
 │   ├── mTLS authentication
@@ -38,6 +46,13 @@ This document provides an overview of all tracked issues across OpenKCM reposito
 ```
 
 ### Key Milestones
+
+| Milestone | Target Date | Description |
+|-----------|-------------|-------------|
+| 🚀 **Showroom Demo** | Jun 2026 | Krypton running on Platform Mesh with MongoDB |
+| 🟦 **CMK & Krypton Integration** | Jun 2026 | CMK and Krypton both deployed and integrated in Showroom (internal keystore only) |
+| 🔗 **Full Chain (L1-L4)** | Nov 2026 | CMK + Krypton integrated end-to-end |
+| 🧩 **Keystore Plugin** | Q4 2026+ | OpenBao plugin support for external keystore |
 
 | Milestone | Target Date | Description |
 |-----------|-------------|-------------|
