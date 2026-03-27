@@ -30,7 +30,6 @@ You can have look at our current road map to have a better overview of our plann
 
 To facilitate a nice environment for all, check out [our Code of Conduct](https://github.com/openkcm/.github/blob/main/CODE_OF_CONDUCT.md).
 
-
 ## 👩‍💻 How to Start
 
 You can try out OpenKCM by following our documentation and exploring the CMK Layer directly. We are actively adding new developments to our solution. Check out the documentation for setup instructions and links to what we offer.
@@ -46,3 +45,5 @@ OpenKCM provides cryptographic key management capabilities for cloud-native envi
 - **Tenant & System Management** - Multi-tenant isolation with secure identity propagation
 - **Plugin Architecture** - Extensible keystore and identity management plugins for various backend integrations (AWS KMS, GCP KMS, Azure Key Vault, HSM/PKCS#11)
 - **Platform Mesh Integration** - Seamless integration with the Apeiro Platform Mesh for multi-tenant key management
+
+<p align="center"><img alt="Bundesministerium für Wirtschaft und Energie (BMWE)-EU funding logo" src="https://apeirora.eu/assets/img/BMWK-EU.png" width="400"/></p>
