@@ -26,13 +26,13 @@ This document provides an overview of all tracked issues across OpenKCM reposito
 │   ├── MasterKey management (Seal + Shamir SSS)
 │   ├── Static MasterKey provider
 │   ├── CLI tool (krypton command)
-│   └── Krypton Integration in Showroom
+│   └── Krypton deployment on Showroom Gardener cluster (service running, visible — not full integration)
 │
 ├─ Q2 (Apr-Jun) ──── 🔄 CMK INTEGRATION IN PLATFORM MESH (IN PROGRESS)
 │   ├── CMK UI integrated in Platform (SSO)
 │   ├── AWS KMS plugin working
 │   ├── Tenant management complete
-│   └── CMK Core Deployment in Showroom
+│   └── CMK Core deployment on Showroom Gardener cluster
 │
 ├─ Q3 (Jul-Sep) ──── 🎯 CRYPTO LAYER MVP (End of Summer)
 │   ├── Krypton KMIP + crypto ops production-ready
@@ -53,7 +53,7 @@ This document provides an overview of all tracked issues across OpenKCM reposito
 | Milestone                 | Target Date | Description                                     | Status         |
 | ------------------------- | ----------- | ----------------------------------------------- | -------------- |
 | 🔬 **LLD Complete**       | Mar 2026    | Low-Level Design finalized, interfaces defined  | ✅ Done        |
-| 🚀 **Showroom Demo**      | Jun 2026    | Krypton running on Platform Mesh with MongoDB   | 🔄 In Progress |
+| 🚀 **Showroom Deployment**      | Jun 2026    | Krypton deployed on Showroom Gardener cluster — service running and visible (deployment only, not full integration)  | 🔄 In Progress |
 | 🎯 **Crypto Layer MVP**   | Aug 2026    | Production-ready KMIP server with multi-tenancy | Planned        |
 | 🔗 **Full Chain (L1-L4)** | Nov 2026    | CMK + Krypton integrated end-to-end             | Planned        |
 
