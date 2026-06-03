@@ -20,35 +20,42 @@ This document provides an overview of the OpenKCM project roadmap across all rep
 │   ├── ✅ CMK deployed into showroom environment
 │   └── ✅ Architecture decisions finalized
 │
-├─ Q2 (Apr–Jun) ──── 🔄 CUSTOMER KEY SOVEREIGNTY DEMO (IN PROGRESS)
-│   ├── KMIP server — MongoDB key provisioning
-│   ├── OpenBao keystore plugin (L1 key operations)
-│   ├── CMK Controller — tenant management & L1 key validation
-│   ├── CMK UI — account-level key management in Platform Mesh
-│   ├── Platform Mesh — OpenKCM integration
-│   └── End-to-end sovereignty demo (Jun 30)
+├─ Q2 (Apr-Jun) ──── 🔄 KRYPTON CORE DEVELOPMENT (IN PROGRESS)
+│   ├── KMIP Server implementation
+│   ├── KeyChain & Key lifecycle (L2-L4)
+│   ├── MasterKey management (Seal + Shamir SSS)
+│   ├── Static MasterKey provider
+│   ├── CLI tool (krypton command)
+│   └── Krypton deployment on Showroom Gardener cluster (service running, visible — not full integration)
 │
-├─ Q3 (Jul–Sep) ──── 🎯 KEY LIFECYCLE MANAGEMENT
-│   ├── Internal Versioned Key (IVK) management & rotation
-│   ├── Seal mode provider (multi-cloud + OpenBao)
-│   ├── Keystore storage plugin (L2–L4 key material)
-│   ├── CMK UI — security context propagation
-│   ├── OpenKCM Controller — KCP client & tenant watcher
-│   └── Identity management plugins
+├─ Q2 (Apr-Jun) ──── 🔄 CMK INTEGRATION IN PLATFORM MESH (IN PROGRESS)
+│   ├── CMK UI integrated in Platform (SSO)
+│   ├── AWS KMS plugin working
+│   ├── Tenant management complete
+│   └── CMK Core deployment on Showroom Gardener cluster
 │
-└─ Q4 (Oct–Dec) ──── 🔒 PRODUCTION HARDENING
-    ├── MasterKey management (Seal + Shamir SSS)
-    ├── High availability & disaster recovery
-    ├── mTLS hardening
-    └── Kill switch & key revocation
+├─ Q3 (Jul-Sep) ──── 🎯 CRYPTO LAYER MVP (End of Q3)
+│   ├── Krypton KMIP + crypto ops production-ready
+│   ├── Keystore plugin (OpenBao)
+│   └── CMK UI adoption finalized
+│
+├─ Q4 (Oct-Dec) ──── CMK-KRYPTON INTEGRATION & HARDENING
+│   ├── L1 (CMK) ↔ L2-L4 (Krypton) integration
+│   ├── Seal/Auto-Unseal implementation
+│   ├── HA & disaster recovery
+│   ├── MongoDB KMIP integration validated
+│   ├── Multi-tenant key isolation
+│   ├── mTLS authentication
+│   ├── In-memory + persistent storage
+│   └── Production-ready Showroom deployment
 ```
 
-| Milestone | Target | Description | Status |
-|---|---|---|---|
-| ✅ **Foundation** | Mar 2026 | Architecture, agent layer, core infrastructure | Done |
-| 🔄 **Sovereignty Demo** | Jun 30, 2026 | Customer registers root key — platform derives full key chain — workload encrypted automatically | In Progress |
-| 🎯 **Key Lifecycle MVP** | Sep 2026 | IVK rotation, multi-cloud seal providers, keystore plugins | Planned |
-| 🔒 **Production Ready** | Dec 2026 | HA, MasterKey/SSS, kill switch, mTLS hardening | Planned |
+| Milestone                 | Target Date | Description                                     | Status         |
+| ------------------------- | ----------- | ----------------------------------------------- | -------------- |
+| 🔬 **LLD Complete**       | Mar 2026    | Low-Level Design finalized, interfaces defined  | ✅ Done        |
+| 🚀 **Showroom Deployment**      | Jun 2026    | Krypton deployed on Showroom Gardener cluster — service running and visible (deployment only, not full integration)  | 🔄 In Progress |
+| 🎯 **Crypto Layer MVP**   | Sep 2026    | Production-ready KMIP server with multi-tenancy | Planned        |
+| 🔗 **Full Chain (L1-L4)** | Nov 2026    | CMK + Krypton integrated end-to-end             | Planned        |
 
 ---
 
@@ -60,7 +67,7 @@ This document provides an overview of the OpenKCM project roadmap across all rep
 |---|---|---|---|
 | [#144](https://github.com/openkcm/krypton/issues/144) | Agent Registration & Communication Layer | Q1–Q2 | ✅ Done |
 | [#145](https://github.com/openkcm/krypton/issues/145) | Key Hierarchy API — Tenant, Key, and Chain Management | Q1–Q2 | 🔄 In Progress |
-| [#146](https://github.com/openkcm/krypton/issues/146) | Encrypt / Decrypt Core (Cryptor Layer) | Q1–Q2 | ✅ Done |
+| [#146](https://github.com/openkcm/krypton/issues/146) | Encrypt / Decrypt Core (Cryptor Layer) | Q1–Q2 | 🔄 In Progress |
 | [#61](https://github.com/openkcm/krypton/issues/61) | Crypto Core & Edge Services Using KMIP 1.4 | Q2 | 🔄 In Progress |
 | [#78](https://github.com/openkcm/krypton/issues/78) | OpenKCM Krypton Showroom Demo | Q2 | 🔄 In Progress |
 | [#60](https://github.com/openkcm/krypton/issues/60) | Internal Versioned Key (IVK) Management | Q3 | Planned |
@@ -121,4 +128,4 @@ This document provides an overview of the OpenKCM project roadmap across all rep
 
 ---
 
-_Last updated: 2026-05-28_
+_Last updated: 2026-06-03_
