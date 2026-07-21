@@ -34,7 +34,8 @@ This document provides an overview of the OpenKCM project roadmap across all rep
 │   ├── KMIP full flow: Create → Activate → Get → MongoDB encrypts at rest
 │   ├── L1 (OpenBao) → L2 → L3 → L4 key chain demonstrated end-to-end
 │   ├── Key chain visible: tenant root → domain key → service key → DEK
-│   └── Sovereignty guarantee demonstrated: platform never holds key material
+│   ├── Sovereignty guarantee demonstrated: platform never holds key material
+│   └── Showroom demo ref: apeirora/showroom#180 — Encrypted File Management Demo
 │
 ├─ Q4 (Oct–Dec) ──── GOVERNANCE LAYER & PLATFORM MESH INTEGRATION
 │   ├── Kill switch (soft — suspend with cascade)
@@ -81,6 +82,7 @@ This document provides an overview of the OpenKCM project roadmap across all rep
 | [#146](https://github.com/openkcm/krypton/issues/146) | Encrypt / Decrypt Core (Cryptor Layer) | Q2–Q3 | 🔄 In Progress |
 | [#61](https://github.com/openkcm/krypton/issues/61) | Crypto Core & Edge Services Using KMIP 1.4 | Q2–Q3 | 🔄 In Progress |
 | [#78](https://github.com/openkcm/krypton/issues/78) | OpenKCM Krypton Showroom Demo | Q3 | 🔄 In Progress |
+| [apeirora/showroom#180](https://github.com/apeirora/showroom/issues/180) | OpenKCM Encrypted File Management Demo | Q3–Q4 | Planned |
 | [#60](https://github.com/openkcm/krypton/issues/60) | Internal Versioned Key (IVK) Management | Q3 | 🔄 In Progress |
 | [#26](https://github.com/openkcm/krypton/issues/26) | Seal Mode Provider (multi-cloud + OpenBao) | Q4 | Planned |
 | [#22](https://github.com/openkcm/krypton/issues/22) | MasterKey Management (Seal + Shamir SSS) | Q4 | Planned |
