@@ -12,62 +12,60 @@ This document provides an overview of the OpenKCM project roadmap across all rep
 2026
 │
 ├─ Q1 (Jan–Mar) ──── ✅ FOUNDATION (COMPLETE)
-│   ├── ✅ Krypton architecture investigation & low-level design
-│   ├── ✅ KMIP protocol proof of concept
-│   ├── ✅ Agent registration & communication layer (gRPC)
-│   ├── ✅ Key hierarchy API (AnnounceKey, GetKey, GetKeyChain, ListKeys)
-│   ├── ✅ Cryptor package (AES-256-GCM, ChaCha20-Poly1305, Ed25519)
-│   └── ✅ Architecture decisions finalized
+│   ├── ✅ Key management API — announce, list, get, and traverse key chains
+│   ├── ✅ KMIP protocol support — industry-standard key retrieval for databases and services
+│   ├── ✅ Pluggable keystore backend — swap key storage without changing application code
+│   ├── ✅ OpenBao integration — first supported external keystore for customer root keys (L1)
+│   └── ✅ mTLS authentication — secure communication between all OpenKCM components
 │
-├─ Q2/Q3 (Apr–Jul) ──── 🔄 KRYPTON CORE (IN PROGRESS)
-│   ├── ✅ CLI tool (announce key, list keys, get key, get descendants)
-│   ├── ✅ Vault abstraction layer (SQLite + OpenBao implementations)
-│   ├── ✅ OpenBao keystore plugin (L1 key operations via Transit)
-│   ├── ✅ KMIP server base (Get, GetAttributes)
-│   ├── ✅ Key versioning model and store
-│   ├── ✅ Key processor and version-aware key processor manager
-│   ├── 🔄 Encrypt / decrypt core — IVK + MasterKey provider integration
-│   ├── 🔄 KMIP Create, Activate operations (MongoDB integration)
-│   └── 🔄 Krypton deployment on Showroom Gardener cluster
+├─ Q2/Q3 (Apr–Aug) ──── 🔄 ENCRYPTION OPERATIONS (IN PROGRESS)
+│   ├── ✅ Key versioning — rotate keys without re-encrypting existing data
+│   ├── ✅ KMIP Get and GetAttributes — services can retrieve and inspect keys via KMIP
+│   ├── ✅ KMIP Activate — full key lifecycle management via KMIP protocol
+│   ├── ✅ Multi-cloud MasterKey unsealing — AWS, GCP, Azure, OpenBao, PKCS#11 backends
+│   ├── 🔄 Encrypt / decrypt operations — wrap and unwrap data encryption keys
+│   ├── 🔄 KMIP Create — services can request new keys via KMIP (MongoDB integration)
+│   └── 🔄 Showroom deployment — OpenKCM running on a live Gardener cluster
 │
-├─ Q3 (Jul–Sep) ──── 🎯 END-TO-END DEMO (Target: Sep 2026)
-│   ├── KMIP full flow: Create → Activate → Get → MongoDB encrypts at rest
-│   ├── L1 (OpenBao) → L2 → L3 → L4 key chain demonstrated end-to-end
-│   ├── Key chain visible: tenant root → domain key → service key → DEK
-│   ├── Sovereignty guarantee demonstrated: platform never holds key material
-│   └── Showroom demo ref: apeirora/showroom#180 — Encrypted File Management Demo
+├─ Q3 (Sep 2026) ──── 🎯 END-TO-END DEMO
+│   ├── MongoDB encrypts data at rest using keys from OpenKCM — full KMIP flow
+│   ├── Customer registers their own root key (L1) — platform never holds it
+│   ├── Full key chain visible: root key → domain key → service key → data key
+│   ├── Kill switch demonstrated: customer disables root key → MongoDB instantly inaccessible
+│   └── Live showroom demo — apeirora/showroom#180
 │
-├─ Q4 (Oct–Dec) ──── GOVERNANCE LAYER & PLATFORM MESH INTEGRATION
-│   ├── Kill switch (soft — suspend with cascade)
-│   ├── Four-eyes / multi-party approval for sensitive key operations
-│   ├── Role model (Key Admin, Namespace Encryption Admin, Developer)
-│   ├── OpenKCM Controller — Platform Mesh account-level integration
-│   ├── L2 auto-provisioning per namespace on Platform Mesh
-│   ├── Tenant lifecycle — soft delete with grace period
-│   ├── MasterKey management (Seal + Shamir SSS)
-│   ├── mTLS authentication between components
-│   └── Production-ready Showroom deployment
+├─ Q4 (Oct–Dec 2026) ──── CUSTOMER CONTROL & PLATFORM MESH
+│   ├── Kill switch — customer can instantly revoke all data access with one action
+│   ├── Soft suspension — pause encryption for a service without destroying keys
+│   ├── Key rotation — customer-triggered rotation with zero downtime
+│   ├── Four-eyes approval — sensitive key operations require multi-party sign-off
+│   ├── Role-based access — Key Administrator, Service Encryption Admin, Developer
+│   ├── Platform Mesh integration — enable OpenKCM from the marketplace per account
+│   ├── Zero-touch encryption — services deployed on Platform Mesh get encryption automatically
+│   ├── Region support — advertise available OpenKCM regions to Platform Mesh consumers
+│   ├── Tenant lifecycle — safe account deletion with grace period before key cleanup
+│   └── MasterKey management — Shamir Secret Sharing for secure operator key unsealing
 │
-└─ 2027 ──── ENTERPRISE FEATURES & HARDENING
-    ├── BYOK / HYOK onboarding wizard (customer-facing L1 registration)
-    ├── Key health dashboard and alerting
-    ├── Kill switch dry run (blast radius simulation)
-    ├── SIEM audit export (pluggable audit backends)
-    ├── Key rotation — customer-configurable intervals and manual trigger
-    ├── Multi-region deployment and geographic data residency UI
-    ├── HA & disaster recovery
-    └── Pluggable keystore selection UI (provider switching)
+└─ 2027 ──── ENTERPRISE READINESS
+    ├── BYOK / HYOK onboarding — guided wizard for customers bringing their own keys
+    ├── Kill switch dry run — preview which services would be affected before acting
+    ├── Audit export — send key operation events to SIEM systems
+    ├── Key health dashboard — visibility into key states, expiry, and rotation status
+    ├── Multi-region data residency — deploy OpenKCM close to data, enforce regional boundaries
+    ├── High availability & disaster recovery
+    ├── Additional keystore integrations — HSM, AWS KMS, Azure Key Vault, Thales
+    └── Service provider SDK — standardized integration for services offering encryption to customers
 ```
 
-| Milestone | Target Date | Description | Status |
+| Milestone | Target | Description | Status |
 |---|---|---|---|
-| 🔬 **LLD Complete** | Mar 2026 | Low-level design finalized, interfaces defined | ✅ Done |
-| 🔑 **Key Hierarchy API** | Jun 2026 | Tenant, key, and chain management via gRPC | ✅ Done |
-| 🔌 **OpenBao Integration** | Jul 2026 | L1 key operations via OpenBao Transit plugin | ✅ Done |
-| 🚀 **Showroom Deployment** | Aug 2026 | Krypton running on Showroom Gardener cluster | 🔄 In Progress |
-| 🎯 **End-to-End Demo** | Sep 2026 | Full L1→L4 chain with MongoDB encryption at rest | Planned |
-| 🔗 **Platform Mesh Integration** | Dec 2026 | OpenKCM Controller + account-level governance | Planned |
-| 🏢 **Enterprise Features** | 2027 | Kill switch dry run, SIEM export, health dashboard | Planned |
+| ✅ **Key Management API** | Mar 2026 | Announce, list, get, and traverse key chains | ✅ Done |
+| ✅ **OpenBao Integration** | Jul 2026 | Customer root keys via OpenBao Transit | ✅ Done |
+| ✅ **KMIP Protocol** | Aug 2026 | Industry-standard key retrieval for databases | ✅ Done |
+| 🔄 **Showroom Deployment** | Aug 2026 | OpenKCM live on Showroom Gardener cluster | 🔄 In Progress |
+| 🎯 **End-to-End Demo** | Sep 2026 | MongoDB encryption with customer-controlled keys | Planned |
+| 🔗 **Platform Mesh Integration** | Dec 2026 | Marketplace enablement, zero-touch encryption | Planned |
+| 🏢 **Enterprise Readiness** | 2027 | Audit export, BYOK wizard, multi-region, HA | Planned |
 
 ---
 
@@ -77,50 +75,39 @@ This document provides an overview of the OpenKCM project roadmap across all rep
 
 | # | Title | Quarter | Status |
 |---|---|---|---|
-| [#144](https://github.com/openkcm/krypton/issues/144) | Agent Registration & Communication Layer | Q1–Q2 | ✅ Done |
-| [#145](https://github.com/openkcm/krypton/issues/145) | Key Hierarchy API — Tenant, Key, and Chain Management | Q1–Q2 | ✅ Done |
-| [#146](https://github.com/openkcm/krypton/issues/146) | Encrypt / Decrypt Core (Cryptor Layer) | Q2–Q3 | 🔄 In Progress |
-| [#61](https://github.com/openkcm/krypton/issues/61) | Crypto Core & Edge Services Using KMIP 1.4 | Q2–Q3 | 🔄 In Progress |
-| [#78](https://github.com/openkcm/krypton/issues/78) | OpenKCM Krypton Showroom Demo | Q3 | 🔄 In Progress |
-| [apeirora/showroom#180](https://github.com/apeirora/showroom/issues/180) | OpenKCM Encrypted File Management Demo | Q3–Q4 | Planned |
-| [#60](https://github.com/openkcm/krypton/issues/60) | Internal Versioned Key (IVK) Management | Q3 | 🔄 In Progress |
-| [#26](https://github.com/openkcm/krypton/issues/26) | Seal Mode Provider (multi-cloud + OpenBao) | Q4 | Planned |
-| [#22](https://github.com/openkcm/krypton/issues/22) | MasterKey Management (Seal + Shamir SSS) | Q4 | Planned |
-| [#27](https://github.com/openkcm/krypton/issues/27) | Shamir SSS Mode Provider | Q4 | Planned |
-
-### Investigations
-
-| # | Title | Status |
-|---|---|---|
-| [#68](https://github.com/openkcm/krypton/issues/68) | Krypton Layer — Investigation & Low-Level Design | ✅ Done |
-| [#76](https://github.com/openkcm/krypton/issues/76) | OpenBao Plugin Technical Specifications | 🔄 In Progress |
+| [#144](https://github.com/openkcm/krypton/issues/144) | Key Management API — Tenant, Key, and Chain Operations | Q1–Q2 | ✅ Done |
+| [#145](https://github.com/openkcm/krypton/issues/145) | Pluggable Keystore Backend | Q1–Q2 | ✅ Done |
+| [#146](https://github.com/openkcm/krypton/issues/146) | Encrypt / Decrypt Operations | Q2–Q3 | 🔄 In Progress |
+| [#61](https://github.com/openkcm/krypton/issues/61) | KMIP Protocol — Create, Activate, Get, Wrap, Unwrap | Q2–Q3 | 🔄 In Progress |
+| [#60](https://github.com/openkcm/krypton/issues/60) | Key Rotation with Zero Downtime | Q3 | 🔄 In Progress |
+| [#78](https://github.com/openkcm/krypton/issues/78) | Showroom Demo — MongoDB Encryption End-to-End | Q3 | 🔄 In Progress |
+| [apeirora/showroom#180](https://github.com/apeirora/showroom/issues/180) | Encrypted File Management Demo | Q3–Q4 | Planned |
+| [#187](https://github.com/openkcm/krypton/issues/187) | Kill Switch — Instant Revocation of All Data Access | Q4 | Planned |
+| [#189](https://github.com/openkcm/krypton/issues/189) | Customer-Triggered Key Rotation | Q4 | Planned |
+| [#188](https://github.com/openkcm/krypton/issues/188) | Kill Switch Dry Run — Blast Radius Preview | 2027 | Planned |
+| [#26](https://github.com/openkcm/krypton/issues/26) | Multi-Cloud MasterKey Unsealing | Q4 | Planned |
+| [#22](https://github.com/openkcm/krypton/issues/22) | MasterKey Management — Shamir Secret Sharing | Q4 | Planned |
 
 ---
 
-## OpenKCM Controller — Platform Mesh Integration
+## Platform Mesh Integration
 
 | # | Title | Quarter | Status |
 |---|---|---|---|
-| [#1](https://github.com/openkcm/openkcm-controller/issues/1) | Tenant Management — OpenKCM Controller | Q4 | 🔄 In Progress |
-| [#2](https://github.com/openkcm/openkcm-controller/issues/2) | Remote KCP Client & Kubeconfig Handling | Q4 | Planned |
-| [#3](https://github.com/openkcm/openkcm-controller/issues/3) | Tenant Watcher via APIExport Virtual Workspace | Q4 | Planned |
+| [#1](https://github.com/openkcm/openkcm-controller/issues/1) | OpenKCM Controller — Marketplace Enablement per Account | Q4 | 🔄 In Progress |
+| [#2](https://github.com/openkcm/openkcm-controller/issues/2) | Platform Mesh Cluster Connectivity | Q4 | Planned |
+| [#3](https://github.com/openkcm/openkcm-controller/issues/3) | Zero-Touch Encryption — Auto-provision Keys on Service Deployment | Q4 | Planned |
+| [#5](https://github.com/openkcm/openkcm-controller/issues/5) | Tenant Lifecycle — Safe Account Deletion with Grace Period | Q4 | Planned |
+| [#1](https://github.com/openkcm/platform-mesh/issues/1) | OpenKCM Integration into Platform Mesh Marketplace | Q4 | 🔄 In Progress |
 
 ---
 
-## CMK UI — Account-Level Key Management
+## Customer UI — Key Governance
 
 | # | Title | Quarter | Status |
 |---|---|---|---|
-| [#2](https://github.com/openkcm/cmk-ui/issues/2) | OpenKCM UI Integration into Platform Mesh Portal | Q4 | 🔄 In Progress |
-| [#3](https://github.com/openkcm/cmk-ui/issues/3) | Security Context Propagation from Platform Mesh | Q4 | Planned |
-
----
-
-## Platform Mesh
-
-| # | Title | Quarter | Status |
-|---|---|---|---|
-| [#1](https://github.com/openkcm/platform-mesh/issues/1) | OpenKCM Integration into Platform Mesh | Q4 | 🔄 In Progress |
+| [#2](https://github.com/openkcm/cmk-ui/issues/2) | OpenKCM UI in Platform Mesh Portal — L1 Key Registration & Kill Switch | Q4 | 🔄 In Progress |
+| [#3](https://github.com/openkcm/cmk-ui/issues/3) | Role-Based Access in UI | Q4 | Planned |
 
 ---
 
@@ -128,17 +115,17 @@ This document provides an overview of the OpenKCM project roadmap across all rep
 
 | # | Title | Quarter | Status |
 |---|---|---|---|
-| [#79](https://github.com/openkcm/keystore-plugins/issues/79) | L1 Key Operations via OpenBao Transit Keys | Q2–Q3 | ✅ Done |
-| [#80](https://github.com/openkcm/keystore-plugins/issues/80) | Keystore Storage Plugin for L2–L4 Key Material | Q4 | Planned |
+| [#79](https://github.com/openkcm/keystore-plugins/issues/79) | OpenBao Transit — Customer Root Key Operations | Q2–Q3 | ✅ Done |
+| [#80](https://github.com/openkcm/keystore-plugins/issues/80) | Pluggable Storage Backend for Service and Data Keys | Q4 | Planned |
 
 ---
 
-## Identity Management Plugins
+## Identity & Access
 
 | # | Title | Quarter | Status |
 |---|---|---|---|
-| [#62](https://github.com/openkcm/identity-management-plugins/issues/62) | Identity Management Plugin — Group Resolution | Q4 | Planned |
+| [#62](https://github.com/openkcm/identity-management-plugins/issues/62) | Group-Based Access Control for Key Operations | Q4 | Planned |
 
 ---
 
-_Last updated: 2026-07-21_
+_Last updated: 2026-08-20_
