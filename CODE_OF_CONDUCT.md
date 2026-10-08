@@ -1,5 +1,7 @@
 # NeoNephos Open Source Code of Conduct
 
+NeoNephos adopts the [Contributo Covenant v.3.0](https://www.contributor-covenant.org/version/3/0/)
+
 ## Our Pledge
 We pledge to make our community welcoming, safe, and equitable for all.
 
@@ -40,8 +42,8 @@ Tensions can occur between community members even when they are trying their bes
 
 When an incident does occur, it is important to report it promptly. To report a possible violation, [NOTE: describe your means of reporting here.]
 
-Community Moderators take reports of violations seriously and will make every effort to respond in a timely manner. They will investigate all reports of code of conduct violations, reviewing messages, logs, and recordings, or interviewing witnesses and other participants. 
-Community Moderators will keep investigation and enforcement actions as transparent as possible while prioritizing safety and confidentiality. 
+Community Moderators take reports of violations seriously and will make every effort to respond in a timely manner. They will investigate all reports of code of conduct violations, reviewing messages, logs, and recordings, or interviewing witnesses and other participants.
+Community Moderators will keep investigation and enforcement actions as transparent as possible while prioritizing safety and confidentiality.
 In order to honor these values, enforcement actions are carried out in private with the involved parties, but communicating to the whole community may be part of a mutually agreed upon resolution.
 
 
@@ -69,7 +71,7 @@ If an investigation by the Community Moderators finds that this Code of Conduct 
 This enforcement ladder is intended as a guideline. It does not limit the ability of Community Managers to use their discretion and judgment, in keeping with the best interests of our community.
 
 ## Scope
-This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public or other spaces. 
+This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public or other spaces.
 Examples of representing our community include using an official email address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
 
 ## Attribution
